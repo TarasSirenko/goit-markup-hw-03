@@ -38,9 +38,29 @@ p {
 }
 
 /* ------------------------heder------------------------ */
-/* -------logo----- */
+.container-heder a {
+  display: block;
+}
+.navigation-list {
+  display: flex;
+}
+.contacts {
+  display: flex;
+}
+.heder-nav {
+  display: inline-flex;
+  align-items: center;
+}
+.container-heder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
+  border-bottom: 1px solid #ececec;
+}
+/* -------logo----- */
 .logo {
+  margin-right: 93px;
   font-family: var(--logo-font);
   font-weight: 700;
   font-size: 26px;
@@ -52,7 +72,18 @@ p {
   color: var(--accent-color);
 }
 /* -------end logo----- */
-
+.navigation-list-item:not(:last-child) {
+  margin-right: 50px;
+}
+.navigation-list-item a {
+  padding: 32px 0;
+}
+.contacts-item:not(:last-child) {
+  margin-right: 50px;
+}
+.contacts-item a {
+  padding: 32px 0;
+}
 .nav-link {
   color: var(--title-color);
   font-weight: 500;
@@ -60,6 +91,7 @@ p {
   line-height: 1.143;
   letter-spacing: 0.02em;
 }
+
 .navigation-list .current {
   color: var(--accent-color);
 }
@@ -78,6 +110,11 @@ p {
 }
 /* ------------------------end heder------------------------ */
 /* -------------------------hero----------------------------- */
+.hero {
+  background-color: #2f303a;
+  width: 1600px;
+  margin: 0 auto;
+}
 .hero .container {
   padding-top: 200px;
   padding-bottom: 200px;
@@ -88,6 +125,7 @@ p {
   margin-right: auto;
   margin-bottom: 30px;
 
+  width: 696px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.363;
@@ -95,9 +133,14 @@ p {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
-  background-color: var(--text-color);
 }
 .hero-btn {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 32px;
+  border-radius: 4px;
+  border: 0px;
+
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
@@ -107,11 +150,22 @@ p {
   letter-spacing: 0.06em;
   color: #ffffff;
   background-color: var(--accent-color);
-  margin-left: auto;
-  margin-right: auto;
 }
 /* -------------------------end hero----------------------------- */
 /* -------------------------benefits----------------------------- */
+.benefits .title {
+  font-size: 0;
+}
+.benefits-list {
+  display: flex;
+}
+.benefits-list .item {
+  width: 270px;
+}
+.benefits-list .item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .benefits .container {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -126,6 +180,7 @@ p {
 }
 .benefits-title {
   margin-bottom: 10px;
+
   color: var(--title-color);
   font-weight: 700;
   font-size: 14px;
@@ -140,18 +195,53 @@ p {
 }
 /* -------------------------end benefits----------------------------- */
 /* -------------------------services----------------------------- */
-
+.service-list {
+  display: flex;
+}
+.service-list-item:not(:last-child) {
+  margin-right: 30px;
+}
 .services .title {
   margin-bottom: 50px;
 }
 .services .container {
   padding-bottom: 94px;
 }
+.service-link {
+  display: block;
+}
+.service-img {
+  display: block;
+}
 /* -------------------------end services----------------------------- */
 /* -------------------------team----------------------------- */
+.team {
+  background-color: #f5f4fa;
+  width: 1600px;
+  margin: 0 auto;
+}
+.team-list {
+  display: flex;
+}
+.team-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+.team-list-item {
+  padding-bottom: 30px;
+  text-align: center;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
 .team .container {
   padding-top: 94px;
   padding-bottom: 94px;
+}
+.employee-photo {
+  margin-bottom: 30px;
+}
+.employee-name {
+  margin-bottom: 10px;
 }
 .team .title {
   margin-bottom: 50px;
@@ -170,6 +260,14 @@ p {
 }
 /* -------------------------end team----------------------------- */
 /* -------------------------footer----------------------------- */
+.footer {
+  background-color: #2f303a;
+  width: 1600px;
+  margin: 0px auto;
+}
+.footer .logo {
+  color: #ffffff;
+}
 .footer .container {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -188,7 +286,6 @@ p {
   line-height: 1.714;
   letter-spacing: 0.03em;
   color: #ffffff;
-  background-color: var(--text-color);
 }
 .address .contact-mail,
 .address .contact-number {
@@ -196,39 +293,70 @@ p {
   line-height: 1.714;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
-  background-color: var(--text-color);
 }
 /* -------------------------end footer----------------------------- */
 
 /* -------------------------second page----------------------------- */
 
 /* -------------------------portfolio----------------------------- */
+.portfolio-list .link {
+  display: block;
+}
 .portfolio .container {
   padding-top: 100px;
   padding-bottom: 94px;
 }
 .portfolio-categories {
+  display: flex;
   margin-bottom: 50px;
+  justify-content: center;
 }
 .company-img {
-  margin-bottom: 20px;
+  display: block;
 }
 .company-name {
   margin-bottom: 4px;
 }
 .button {
+  padding: 6px 22px;
+  border-radius: 4px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.625;
   letter-spacing: 0.03em;
   color: var(--title-color);
   background-color: #f5f4fa;
+  border: 0px;
+}
+.portfolio-categories .item:not(:last-child) {
+  margin-right: 8px;
 }
 .button:hover,
 .button:focus {
   color: #ffffff;
   background-color: var(--accent-color);
 }
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.portfolio-list .item:not(:nth-child(3n + 3)) {
+  margin-right: 30px;
+}
+.portfolio-list .item:nth-child(-n + 6) {
+  margin-bottom: 30px;
+}
+.card-content {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+}
+
 .company-name {
   font-weight: 700;
   font-size: 18px;
