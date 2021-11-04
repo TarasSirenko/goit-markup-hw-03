@@ -36,7 +36,19 @@ p {
   padding-left: 15px;
   padding-right: 15px;
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
 
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 /* ------------------------heder------------------------ */
 .container-heder a {
   display: block;
@@ -114,6 +126,7 @@ p {
   background-color: #2f303a;
   width: 1600px;
   margin: 0 auto;
+  text-align: center;
 }
 .hero .container {
   padding-top: 200px;
@@ -129,7 +142,6 @@ p {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.363;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
@@ -145,17 +157,12 @@ p {
   font-size: 16px;
   line-height: 1.875;
   display: flex;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.06em;
   color: #ffffff;
   background-color: var(--accent-color);
 }
 /* -------------------------end hero----------------------------- */
 /* -------------------------benefits----------------------------- */
-.benefits .title {
-  font-size: 0;
-}
 .benefits-list {
   display: flex;
 }
@@ -201,6 +208,9 @@ p {
 .service-list-item:not(:last-child) {
   margin-right: 30px;
 }
+.service-list-item {
+  width: 370px;
+}
 .services .title {
   margin-bottom: 50px;
 }
@@ -227,19 +237,22 @@ p {
   margin-right: 30px;
 }
 .team-list-item {
-  padding-bottom: 30px;
+  width: 270px;
   text-align: center;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
+.name-position {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .team .container {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.employee-photo {
-  margin-bottom: 30px;
-}
+
 .employee-name {
   margin-bottom: 10px;
 }
@@ -266,18 +279,18 @@ p {
   margin: 0px auto;
 }
 .footer .logo {
+  display: block;
   color: #ffffff;
+  margin-bottom: 20px;
 }
 .footer .container {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-.address-list {
-  margin-top: 20px;
+.address-item:not(:last-child) {
+  margin-bottom: 9px;
 }
-.address-item {
-  margin-top: 9px;
-}
+
 .address-item:first-child {
   margin-top: 0px;
 }
@@ -347,10 +360,11 @@ p {
 .portfolio-list .item:nth-child(-n + 6) {
   margin-bottom: 30px;
 }
+.portfolio-list .item {
+  width: 370px;
+}
 .card-content {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 24px;
+  padding: 20px 24px;
 
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
